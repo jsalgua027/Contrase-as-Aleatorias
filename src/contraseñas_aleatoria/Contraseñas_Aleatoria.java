@@ -19,6 +19,8 @@ public class Contraseñas_Aleatoria {
         //Llamo a la clase Random para generar numeros aleatorios 
         Random numAleatorio = new Random();
         //Declaro e inicializo variables
+        String contraseña = "";
+        //Declaro e inicializo variables
         int numero1;
         int numero2;
         int numero3;
@@ -48,5 +50,10 @@ public class Contraseñas_Aleatoria {
             System.out.println("No es par");
         };
         System.out.println("se cumple las dos restricciones");
+
+        //AÑADO LETRA MAYUSCULA DE LA "F" A LA "X", F=70 y X=88
+        contraseña = "" + numero1 + numero2 + numero3 + numero4 + (char) numAleatorio(70, 80);
+
+        System.out.println(contraseña);
     }
 }
