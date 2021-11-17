@@ -16,16 +16,37 @@ public class Contraseñas_Aleatoria {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Llamo a la clase Random para generar numeros aleatorios 
         Random numAleatorio = new Random();
-
+        //Declaro e inicializo variables
         int numero1;
         int numero2;
         int numero3;
         int numero4;
+        // Bucle de control para que no se repitan los numeros
+        do {
+            numero1 = numAleatorio.nextInt(8) + 1;
+            numero2 = numAleatorio.nextInt(8) + 1;
+            numero3 = numAleatorio.nextInt(8) + 1;
+            numero4 = numAleatorio.nextInt(8) + 1;
 
-        numero1 = numAleatorio.nextInt(8) + 1;
-        System.out.println(numero1);
+        } while (!(numero1 != numero2) && (numero3 != numero4));
+        //imprimo por pantalla los nuemeros aleatorios 
+        System.out.println("los numeros son=  " + numero1 + " - " + numero2 + " - " + numero3 + " - " + numero4);
+        // creo variable resultado para usarlo en las retricciones de las del ejerccio; suma de numero 1 y numero 4 debe ser impar
+        int controlSuma = numero1 + numero4;
+        if (!(controlSuma % 2 == 0)) {
 
+        } else {
+            System.out.println("No es impar");
+        }
+        // la tercera restricción es que la multiplicación del numero2 y numero3 sea par
+        int controMultipl = numero2 * numero3;
+        if (controMultipl % 2 == 0) {
+
+        } else {
+            System.out.println("No es par");
+        };
+        System.out.println("se cumple las dos restricciones");
     }
-
 }
