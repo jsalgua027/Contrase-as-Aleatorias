@@ -32,28 +32,8 @@ public class Contraseñas_Aleatoria {
             numero3 = numAleatorio.nextInt(8) + 1;
             numero4 = numAleatorio.nextInt(8) + 1;
 
-        } while (!(numero1 != numero2) && (numero3 != numero4));
-        //imprimo por pantalla los nuemeros aleatorios 
-        System.out.println("los numeros son=  " + numero1 + " - " + numero2 + " - " + numero3 + " - " + numero4);
-        // creo variable resultado para usarlo en las retricciones de las del ejerccio; suma de numero 1 y numero 4 debe ser impar
-        int controlSuma = numero1 + numero4;
-        if (!(controlSuma % 2 == 0)) {
-
-        } else {
-            System.out.println("No es impar");
-        }
-        // la tercera restricción es que la multiplicación del numero2 y numero3 sea par
-        int controMultipl = numero2 * numero3;
-        if (controMultipl % 2 == 0) {
-
-        } else {
-            System.out.println("No es par");
-        };
-        System.out.println("se cumple las dos restricciones");
-
-        //AÑADO LETRA MAYUSCULA DE LA "F" A LA "X", F=70 y X=88
-        contraseña = "" + numero1 + numero2 + numero3 + numero4 + (char) numAleatorio(70, 80);
-
-        System.out.println(contraseña);
+        } while ((numero1 == numero2) || (numero1 == numero3) || (numero1 == numero4) || (numero2 == numero3) || (numero2 == numero4)
+                || (numero3 == numero4) || ((numero1+numero4)%2!=0) || ((numero2*numero3)%2==0));
+      
     }
 }
