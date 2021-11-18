@@ -26,6 +26,8 @@ public class Contraseñas_Aleatoria {
         int numero3;
         int numero4;
         // Bucle de control para que no se repitan los numeros
+        // numero 1 + numero 2 sean impares
+        // numero 3 por numero 4 sea par
         do {
             numero1 = numAleatorio.nextInt(8) + 1;
             numero2 = numAleatorio.nextInt(8) + 1;
@@ -34,6 +36,7 @@ public class Contraseñas_Aleatoria {
 
         } while ((numero1 == numero2) || (numero1 == numero3) || (numero1 == numero4) || (numero2 == numero3) || (numero2 == numero4)
                 || (numero3 == numero4) || ((numero1+numero4)%2!=0) || ((numero2*numero3)%2==0));
-      
+        
+        System.out.println("los numeros que han salido= "+ numero1 + "-"+ numero2+ "-"+ numero3 + "-"+ numero4);
     }
 }
